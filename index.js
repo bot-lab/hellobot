@@ -23,7 +23,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-var allBot = new AllBot(require('./init-allbot'));
+const configuration = require('./init-allbot');
+const allBot = new AllBot(configuration);
 
 // Add this
 allBot.onMessage((sessionKey,message) => {
@@ -34,8 +35,8 @@ app.get('/', function (req, res) {
   res.send('hello bot top')
 });
 
-app.use('/allbot', allBot.router);
+app.use(configuration.endpointURL, allBot.router);
 
-app.listen(8080, function () {
+app.listen(configuration.port, function () {
     console.log('Hello bot is listening on port 8080!')
 })
