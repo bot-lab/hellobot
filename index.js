@@ -38,5 +38,5 @@ app.get('/', function (req, res) {
 app.use(configuration.endpointURL, allBot.router);
 
 app.listen(configuration.port, function () {
-    console.log('Hello bot is listening on port 8080!')
+    console.log('Hello bot is listening on port ' + configuration.port)
 })
