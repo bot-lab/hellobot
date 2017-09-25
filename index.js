@@ -29,6 +29,9 @@ const allBot = new AllBot(configuration);
 // Add this
 allBot.onMessage((sessionKey,message) => {
   allBot.replyText(sessionKey,"Hello");
+
+  console.log("message",message);
+  
 });
 
 app.get('/', function (req, res) {
