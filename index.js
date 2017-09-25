@@ -30,7 +30,7 @@ const allBot = new AllBot(configuration);
 allBot.onMessage((sessionKey,message,originalRequest) => {
   
   allBot.replyText(sessionKey,"Hello1");
-  allBot.sendText(message.providerUserId,"Hello2");
+  allBot.sendText(message.userIdentifier,"Hello2");
   
   console.log("message",message);
   console.log("original request",originalRequest);
