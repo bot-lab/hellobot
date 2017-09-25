@@ -35,6 +35,14 @@ allBot.onMessage((sessionKey,message,originalRequest) => {
 
 });
 
+allBot.on("openchat",(sessionKey,message,originalRequest) => {
+  allBot.replyText(sessionKey,"Hello");
+
+  console.log("message",message);
+  console.log("original request",originalRequest);
+
+});
+
 app.get('/', function (req, res) {
   res.send('hello bot top')
 });
