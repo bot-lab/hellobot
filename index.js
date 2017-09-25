@@ -27,11 +27,12 @@ const configuration = require('./init-allbot');
 const allBot = new AllBot(configuration);
 
 // Add this
-allBot.onMessage((sessionKey,message) => {
+allBot.onMessage((sessionKey,message,originalRequest) => {
   allBot.replyText(sessionKey,"Hello");
 
   console.log("message",message);
-  
+  console.log("original request",originalRequest);
+
 });
 
 app.get('/', function (req, res) {

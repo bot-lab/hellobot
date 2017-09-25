@@ -4,9 +4,9 @@
   "description": "Hello Bot is sample of using ALLBOT. It replies \"Hello\" for any received message.",
   "main": "index.js",
   "dependencies": {
-    "allbot": "^0.1.2",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4"
+    "allbot": "^0.1.65",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5"
   },
   "devDependencies": {},
   "scripts": {
