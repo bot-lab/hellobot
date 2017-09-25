@@ -28,8 +28,10 @@ const allBot = new AllBot(configuration);
 
 // Add this
 allBot.onMessage((sessionKey,message,originalRequest) => {
-  allBot.replyText(sessionKey,"Hello");
-
+  
+  allBot.replyText(sessionKey,"Hello1");
+  allBot.sendText(message.providerUserId,"Hello2");
+  
   console.log("message",message);
   console.log("original request",originalRequest);
 
