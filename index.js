@@ -37,7 +37,7 @@ allBot.onMessage((sessionKey,message,originalRequest) => {
 
 });
 
-allBot.on("openchat",(message,originalRequest) => {
+allBot.on("newchat",(message,originalRequest) => {
 
   setTimeout(()=>{
     allBot.sendText(message.userIdentifier,"Hi!");
@@ -46,7 +46,6 @@ allBot.on("openchat",(message,originalRequest) => {
   setTimeout(()=>{
     allBot.sendText(message.userIdentifier,"Welcome to hello bot");
   },2000);
-
 
   console.log("message",message);
   console.log("original request",originalRequest);
